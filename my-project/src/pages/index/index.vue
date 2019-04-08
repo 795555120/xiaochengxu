@@ -23,23 +23,9 @@
         <i-grid-label>同人</i-grid-label>
       </i-grid-item>
     </i-grid>
+
+
     <i-panel title="标题">
-      <view style="padding: 15px;"> 
-        <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-            <view slot="content">内容不错</view>
-            <view slot="footer">尾部内容</view>
-        </i-card>   
-      </view>
-    </i-panel>
-        <i-panel title="标题">
-      <view style="padding: 15px;"> 
-        <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-            <view slot="content">内容不错</view>
-            <view slot="footer">尾部内容</view>
-        </i-card>   
-      </view>
-    </i-panel>
-        <i-panel title="标题">
       <view style="padding: 15px;"> 
         <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
             <view slot="content">内容不错</view>
@@ -51,7 +37,19 @@
 </template>
 
 <script>
+created () 
+{
+    const db = wx.cloud.database({ env: 'edu-868a10' })
+    db.collection('shop').get().then(
+      res => {
+        console.log(res.data)
+        this.shops = res.data
+      }
+    )
+}
+
 </script>
 
 <style scoped>
 </style>
+
