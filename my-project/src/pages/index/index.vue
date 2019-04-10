@@ -3,6 +3,7 @@
     <i-notice-bar icon="systemprompt" loop>
     漫文寨测试版1.0上线了，欢迎大家！
     </i-notice-bar>
+
     <i-grid>
       <i-grid-item>
         <i-grid-icon>
@@ -23,8 +24,6 @@
         <i-grid-label>同人</i-grid-label>
       </i-grid-item>
     </i-grid>
-
-
     <i-panel title="标题">
       <view style="padding: 15px;"> 
         <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
@@ -37,19 +36,46 @@
 </template>
 
 <script>
-created () 
-{
-    const db = wx.cloud.database({ env: 'edu-868a10' })
-    db.collection('shop').get().then(
-      res => {
-        console.log(res.data)
-        this.shops = res.data
-      }
-    )
-}
+import { formatTime } from '@/utils/index'
+import card from '@/components/card'
 
+export default {
+  components: {
+    card
+  },
+
+  data () {
+    return {
+      logs: [],
+      imgUrls: [
+        'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/newsPicture/05558951-de60-49fb-b674-dd906c8897a6',
+        'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/coursePicture/0fbcfdf7-0040-4692-8f84-78bb21f3395d',
+        'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/management-school-picture/7683b32e-4e44-4b2f-9c03-c21f34320870'
+      ]
+    }
+  },
+
+  created () {
+    let logs
+    if (mpvuePlatform === 'my') {
+      logs = mpvue.getStorageSync({key: 'logs'}).data || []
+    } else {
+      logs = mpvue.getStorageSync('logs') || []
+    }
+    this.logs = logs.map(log => formatTime(new Date(log)))
+  }
+}
 </script>
 
-<style scoped>
+<style>
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+
+.log-item {
+  margin: 10rpx;
+}
 </style>
 
