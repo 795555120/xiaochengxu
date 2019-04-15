@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/main",
     "pages/logs/main",
-    "pages/counter/main"
+    "pages/counter/main",
+    "pages/maps/map"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,6 +32,11 @@
       "pagePath": "pages/logs/main",
       "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
+    }, {
+      "text": "地图",
+      "pagePath": "pages/map/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
     }],
 
     "items": [{
@@ -46,6 +52,11 @@
     }, {
       "text": "我的",
       "pagePath": "pages/logs/main",
+      "iconPath": "static/tabs/orders.png",
+      "selectedIconPath": "static/tabs/orders-active.png"
+    }, {
+      "text": "地图",
+      "pagePath": "pages/map/main",
       "iconPath": "static/tabs/orders.png",
       "selectedIconPath": "static/tabs/orders-active.png"
     }],
