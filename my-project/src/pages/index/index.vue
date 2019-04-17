@@ -24,11 +24,11 @@
         <i-grid-label>同人</i-grid-label>
       </i-grid-item>
     </i-grid>
-    <i-panel title="标题">
-      <view style="padding: 15px;"> 
-        <i-card title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-            <view slot="content">内容不错</view>
-            <view slot="footer">尾部内容</view>
+    <i-panel title="热榜">
+      <view style="padding: 0px;"> 
+        <i-card title="鹿瑶知马力"  thumb ="http://imgsrc.baidu.com/forum/pic/item/0135c3ed8a136327d67207349f8fa0ec09fac702.jpg">
+            <view slot="content">不知道为什么</view>
+            <view slot="footer">柠檬它围绕着我</view>
         </i-card>   
       </view>
     </i-panel>
