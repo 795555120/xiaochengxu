@@ -17,3 +17,5 @@
     <button bindtap="includePoints" class="page-body-button" type="primary">缩放视野展示所有经纬度</button>
   </view>
 </view>
+
+
