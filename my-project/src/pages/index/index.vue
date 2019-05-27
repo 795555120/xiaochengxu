@@ -5,7 +5,7 @@
     </i-notice-bar>
 
     <i-grid i-class="no-border">
-      <i-grid-item v-for="grid in grids" :key="grid" i-class="no-border">
+      <i-grid-item @click="goType(grid)" v-for="grid in grids" :key="grid" i-class="no-border">
         <i-grid-icon>
             <image :src="grid.image" />
         </i-grid-icon>
@@ -43,14 +43,14 @@ export default {
     }
   },
 
-  created () {
-    let logs
-    if (mpvuePlatform === 'my') {
-      logs = mpvue.getStorageSync({key: 'logs'}).data || []
-    } else {
-      logs = mpvue.getStorageSync('logs') || []
+  methods:{
+    goType(type){
+      console.log(type)
     }
-    this.logs = logs.map(log => formatTime(new Date(log)))
+  },
+
+  created () {
+    
   }
 }
 </script>
