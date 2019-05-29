@@ -43,9 +43,14 @@ export default {
     }
   },
 
-  methods:{
+  methods: {
+    goList (url) {
+      mpvue.navigateTo({ url })
+    },
     goType(type){
       console.log(type)
+      let url = '../logs/main?type=' + type.title
+      mpvue.navigateTo({ url })
     }
   },
 
