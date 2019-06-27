@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/list/main",
     "pages/counter/main"
   ],
   "window": {
@@ -21,11 +20,6 @@
       "pagePath": "pages/index/main",
       "iconPath": "static/tabs/home.png",
       "selectedIconPath": "static/tabs/home-active.png"
-    }, {
-      "text": "关注",
-      "pagePath": "pages/list/main",
-      "iconPath": "static/images/list.png",
-      "selectedIconPath": "static/images/_list.png"
     }, {
       "text": "我的",
       "pagePath": "pages/counter/main",
