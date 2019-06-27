@@ -1,0 +1,6 @@
+[
+    {"id":1,"name":"圣墟","address":"起点中文网","remark":"辰东","img":"/static/images/6.jpg","type":2,"latitude": 30.574935,"longitude": 114.324310},
+    {"id":2,"name":"牧神记","address":"起点中文网","remark":"宅猪","img":"/static/images/7.jpg","type":2,"latitude": 30.585908,"longitude": 114.333000},
+    {"id":3,"name":"斗破苍穹","address":"起点中文网","remark":"天蚕土豆","img":"/static/images/8.jpg","type":2,"latitude": 30.587164,"longitude": 114.341841},
+    {"id":4,"name":"龙族","address":"实体书","remark":"江南","img":"/static/images/9.jpg","type":2,"latitude": 30.587164,"longitude": 114.341841}
+]

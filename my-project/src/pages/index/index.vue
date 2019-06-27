@@ -3,7 +3,19 @@
     <i-notice-bar icon="systemprompt" loop>
     漫文寨测试版1.0上线了，谢谢大家的支持！
     </i-notice-bar>
-
+    <swiper
+      :indicator-dots="indicatorDots"
+      :autoplay="autoplay"
+      :interval="interval"
+      :duration="duration"
+      style="height:200px"
+    >
+    <block v-for="item in imgUrls" :key="item">
+      <swiper-item>
+        <image :src="item" style="width:100%;"/>
+      </swiper-item>
+    </block>
+  </swiper>
     <i-grid i-class="no-border">
       <i-grid-item @click="goType(grid)" v-for="grid in grids" :key="grid" i-class="no-border">
         <i-grid-icon>
@@ -28,11 +40,21 @@
 export default {
   data () {
     return {
+      imgUrls: [
+        'https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1475311644,2439664071&fm=179&app=42&f=JPEG?w=328&h=164.jpg',
+        'https://ss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=645174013,2425845957&fm=202&mola=new&crop=v1.jpg',
+        'https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=914098589,2376292293&fm=58.jpg'
+      ],
+      indicatorDots: true,
+      autoplay: true,
+      interval: 5000,
+      duration: 1000,
+
       title_name:"热榜",
       grids:[
         {title:"漫画",image:"../../static/images/shu.png"},
         {title:"网文",image:"../../static/images/shu2.png"},
-        {title:"同人",image:"../../static/images/shu3.png"}
+        {title:"动漫",image:"../../static/images/shu3.png"}
       ],
       top:[
         {name:"鹿瑶知马力",author:"不知道为什么",image:"http://imgsrc.baidu.com/forum/pic/item/0135c3ed8a136327d67207349f8fa0ec09fac702.jpg",remark:"柠檬它围绕着我"},
@@ -49,7 +71,7 @@ export default {
     },
     goType(type){
       console.log(type)
-      let url = '../list/main?type=' + type.title
+      let url = '../logs/main?type=' + type.title
       mpvue.navigateTo({ url })
     }
   },

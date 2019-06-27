@@ -14,7 +14,7 @@
 	"projectname": "manwenzhai",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-	"libVersion": "2.7.0",
+	"libVersion": "2.7.2",
 	"condition": {
 		"search": {
 			"current": -1,
