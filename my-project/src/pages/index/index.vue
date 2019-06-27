@@ -49,7 +49,7 @@ export default {
     },
     goType(type){
       console.log(type)
-      let url = '../logs/main?type=' + type.title
+      let url = '../list/main?type=' + type.title
       mpvue.navigateTo({ url })
     }
   },
