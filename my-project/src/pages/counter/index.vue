@@ -7,8 +7,8 @@
     <open-data type="userNickName"></open-data>
     </view>
     <i-panel title="我要推荐！！！">
-      <i-input :value="name" @change="changeName($event)" title="名称" autofocus placeholder="请输入店名" maxlength="20" />
-      <i-input :value="address" @change="changeAddress($event)" title="来源" placeholder="请输入详细地址" maxlength="30" />
+      <i-input :value="name" @change="changeName($event)" title="名称" autofocus placeholder="请输入名称" maxlength="20" />
+      <i-input :value="address" @change="changeAddress($event)" title="来源" placeholder="请输入来源信息" maxlength="30" />
       <i-input :value="reason" @change="changeReason($event)" title="推荐理由" placeholder="请输入推荐理由" maxlength="50" />
     </i-panel>
     <i-button @click="handleClick" type="warning" size="default">我要推荐</i-button>
