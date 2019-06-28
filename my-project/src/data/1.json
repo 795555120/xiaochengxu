@@ -1,0 +1,6 @@
+[
+    {"id":1,"name":"灵笼","address":"B站","remark":"盼了一年的质量国漫","img":"/static/images/10.jpg","type":3,"latitude": 30.575157,"longitude": 114.332303},
+    {"id":2,"name":"刺客伍六七","address":"B站","remark":"好评如潮的国漫佳作","img":"/static/images/11.jpg","type":3,"latitude": 30.579434,"longitude": 114.330983},
+    {"id":3,"name":"钢之炼金术师","address":"B站","remark":"全网综合评分最高的动漫","img":"/static/images/12.jpg","type":3,"latitude": 30.575748,"longitude": 114.332775},
+    {"id":4,"name":"命运石之门","address":"B站","remark":"科幻神作","img":"/static/images/13.jpg","type":3,"latitude": 30.573291,"longitude": 114.333172}
+]

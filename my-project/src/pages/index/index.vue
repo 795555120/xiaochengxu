@@ -27,7 +27,7 @@
 
     <i-panel :title="title_name">
       <view style="padding: 0px;"> 
-        <i-card v-for="item in top" :key="item" :title="item.name" :thumb ="item.image">
+        <i-card @click="goList(item.url)" v-for="item in top" :key="item" :title="item.name" :thumb ="item.image">
             <view slot="content">{{item.author}}</view>
             <view slot="footer">{{item.remark}}</view>
         </i-card>   
@@ -57,10 +57,10 @@ export default {
         {title:"动漫",image:"../../static/images/shu3.png"}
       ],
       top:[
-        {name:"鹿瑶知马力",author:"不知道为什么",image:"http://imgsrc.baidu.com/forum/pic/item/0135c3ed8a136327d67207349f8fa0ec09fac702.jpg",remark:"柠檬它围绕着我"},
-        {name:"青春奇妙物语",author:"两色风景",image:"https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=2fd976ab247f9e2f6438155a7e598241/7aec54e736d12f2e376a6a2d4cc2d56285356814.jpg",remark:"有趣的校园幻想小说"},
-        {name:"龙族V",author:"江南",image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557900813064&di=e28a2e48e9b0d1c0fe7ddc3810a937d6&imgtype=0&src=http%3A%2F%2Fi-1.binzz.com%2F2018%2F6%2F22%2Fdaaa570f-40ad-4936-9eec-cb178dc4ab26.jpg%3Fwidth%3D768%26height%3D1024",remark:"挖坑青年江南的中年填坑之路"},
-        {name:"将夜",author:"猫腻",image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557900931053&di=09181105ff0fd8d82dc78ed18e348101&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fent%2Ftransform%2F20161117%2FHfQO-fxxwrwk1331170.jpg",remark:"网上各种梗大家应该都看过"}
+        {name:"刺客伍六七",author:"B站",image:"https://i0.hdslb.com/bfs/bangumi/8ff39c776f473d8f4fe77910cec59e87ebd1e275.jpg@268w_358h.webp",remark:"高分国漫续作","url":'../logs/main?type=3'},
+        {name:"青春奇妙物语",author:"两色风景",image:"https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=2fd976ab247f9e2f6438155a7e598241/7aec54e736d12f2e376a6a2d4cc2d56285356814.jpg",remark:"有趣的校园幻想小说","url":'../logs/main?type=2'},
+        {name:"一人之下",author:"动漫堂",image:"https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3869060824,3652350992&fm=58&bpow=449&bpoh=631",remark:"设定很棒的质量漫画","url":'../logs/main?type=3'},
+        {name:"将夜",author:"猫腻",image:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557900931053&di=09181105ff0fd8d82dc78ed18e348101&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fent%2Ftransform%2F20161117%2FHfQO-fxxwrwk1331170.jpg",remark:"网上各种梗大家应该都看过","url":'../logs/main?type=2'}
         ]
     }
   },
