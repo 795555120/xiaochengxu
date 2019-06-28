@@ -53,7 +53,7 @@ export default {
       title_name:"热榜",
       grids:[
         {title:"漫画",image:"../../static/images/shu.png"},
-        {title:"网文",image:"../../static/images/shu2.png"},
+        {title:"网络小说",image:"../../static/images/shu2.png"},
         {title:"动漫",image:"../../static/images/shu3.png"}
       ],
       top:[

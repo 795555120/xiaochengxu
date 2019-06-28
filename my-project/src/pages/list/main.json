@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "吃货分类",
+  "navigationBarTitleText": "分类",
   "usingComponents": {
       "i-grid": "../../../static/dist/grid/index",
       "i-grid-item": "../../../static/dist/grid-item/index",
